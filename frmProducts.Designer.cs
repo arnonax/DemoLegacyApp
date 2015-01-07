@@ -59,6 +59,7 @@
             this.priceDataGridViewTextBoxColumn});
 			this.dgvProducts.DataSource = this.productsBindingSource;
 			this.dgvProducts.Location = new System.Drawing.Point(13, 13);
+			this.dgvProducts.MultiSelect = false;
 			this.dgvProducts.Name = "dgvProducts";
 			this.dgvProducts.ReadOnly = true;
 			this.dgvProducts.RowTemplate.Height = 24;
@@ -128,6 +129,7 @@
 			this.btnDelete.TabIndex = 3;
 			this.btnDelete.Text = "&Delete";
 			this.btnDelete.UseVisualStyleBackColor = true;
+			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 			// 
 			// frmProducts
 			// 
@@ -138,6 +140,7 @@
 			this.Controls.Add(this.btnEdit);
 			this.Controls.Add(this.btnAdd);
 			this.Controls.Add(this.dgvProducts);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Name = "frmProducts";
 			this.Text = "Products";
 			this.Load += new System.EventHandler(this.frmProducts_Load);
