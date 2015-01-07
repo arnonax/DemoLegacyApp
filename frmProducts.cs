@@ -17,10 +17,29 @@ namespace LegacyApplication
 			InitializeComponent();
 		}
 
-		private void frmProducts_FormClosing(object sender, FormClosingEventArgs e)
+		private void frmProducts_Load(object sender, EventArgs e)
 		{
-			if (storeDataSet.HasChanges())
-				storeDataSet.AcceptChanges();
+			productsTableAdapter.Fill(storeDataSet.Products);
+		}
+
+		private void btnAdd_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				var frmProduct = new frmProduct();
+				var dialogResult = frmProduct.ShowDialog();
+				if (dialogResult != DialogResult.OK)
+					return;
+
+				productsTableAdapter.Insert(frmProduct.Barcode, frmProduct.Description, frmProduct.Price);
+				productsTableAdapter.Fill(storeDataSet.Products);
+
+				dgvProducts.CurrentCell = dgvProducts.Rows.Last().Cells.First();
+			}
+			catch (Exception exception)
+			{
+				MessageBox.Show(exception.Message);
+			}
 		}
 	}
 }
