@@ -37,9 +37,9 @@ namespace LegacyApplication
 
 		private void frmProduct_Load(object sender, System.EventArgs e)
 		{
-			barcodeErrorProvider.SetError(txtBarcode, "Barcode cannot be empty");
-			descriptionErrorProvider.SetError(txtDescription, "Description cannot be empty");
-			priceErrorProvider.SetError(mtbPrice, "Invalid price");
+			txtBarcode_TextChanged(null, null);
+			txtDescription_TextChanged(null, null);
+			mtbPrice_TextChanged(null, null);
 		}
 
 		private void txtBarcode_TextChanged(object sender, System.EventArgs e)
@@ -88,6 +88,14 @@ SetOKEnabled:
 				string.IsNullOrEmpty(barcodeErrorProvider.GetError(txtBarcode))
 				&& string.IsNullOrEmpty(descriptionErrorProvider.GetError(txtDescription))
 				&& string.IsNullOrEmpty(priceErrorProvider.GetError(mtbPrice));
+		}
+
+		public DialogResult EditProduct(StoreDataSet.ProductsRow productsRow)
+		{
+			txtBarcode.Text = productsRow.Barcode;
+			txtDescription.Text = productsRow.Description;
+			mtbPrice.Text = productsRow.Price.ToString();
+			return ShowDialog();
 		}
 	}
 }

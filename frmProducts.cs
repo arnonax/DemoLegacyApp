@@ -53,15 +53,44 @@ namespace LegacyApplication
 			if (mbr != DialogResult.Yes)
 				return;
 
-			Debug.Assert(dgvProducts.CurrentRow != null, "dgvProducts.CurrentRow != null");
-			var rowView = dgvProducts.CurrentRow.DataBoundItem as DataRowView;
-			
-			Debug.Assert(rowView != null, "rowView != null");
-			var row = rowView.Row as StoreDataSet.ProductsRow;
-			
-			Debug.Assert(row != null, "row != null");
+			var row = GetCurrentProductRow();
 			productsTableAdapter.Delete(row.Id, row.Barcode, row.Description, row.Price);
 			row.Delete();
+		}
+
+		private StoreDataSet.ProductsRow GetCurrentProductRow()
+		{
+			Debug.Assert(dgvProducts.CurrentRow != null, "dgvProducts.CurrentRow != null");
+			var rowView = dgvProducts.CurrentRow.DataBoundItem as DataRowView;
+
+			Debug.Assert(rowView != null, "rowView != null");
+			var row = rowView.Row as StoreDataSet.ProductsRow;
+
+			Debug.Assert(row != null, "row != null");
+			return row;
+		}
+
+		private void btnEdit_Click(object sender, EventArgs e)
+		{
+			var row = GetCurrentProductRow();
+			var frmProduct = new frmProduct();
+			var dialogResult = frmProduct.EditProduct(row);
+			if (dialogResult != DialogResult.OK)
+				return;
+
+			row.Barcode = frmProduct.Barcode;
+			row.Description = frmProduct.Description;
+			row.Price = frmProduct.Price;
+
+			try
+			{
+				productsTableAdapter.Update(row);
+				row.AcceptChanges();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Update Product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 		}
 	}
 }
