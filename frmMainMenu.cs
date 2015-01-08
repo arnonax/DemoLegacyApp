@@ -23,5 +23,10 @@ namespace LegacyApplication
 		{
 			new frmSellingMode().ShowDialog();
 		}
+
+		private void btnPromotions_Click(object sender, System.EventArgs e)
+		{
+			new frmPromotions().ShowDialog();
+		}
 	}
 }

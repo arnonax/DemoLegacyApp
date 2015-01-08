@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace LegacyApplication
@@ -13,6 +15,11 @@ namespace LegacyApplication
 		public static DataGridViewCell First(this DataGridViewCellCollection cells)
 		{
 			return cells.Cast<DataGridViewCell>().First();
+		}
+
+		public static bool None<T>(this IEnumerable<T> source, Func<T, bool> predicate)
+		{
+			return source.All(x => !predicate(x));
 		}
 	}
 }

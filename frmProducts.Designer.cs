@@ -35,7 +35,7 @@
 			this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.storeDataSet = new LegacyApplication.StoreDataSet();
-			this.productsTableAdapter = new LegacyApplication.StoreDataDataSetTableAdapters.ProductsTableAdapter();
+			this.productsTableAdapter = new LegacyApplication.StoreDataSetTableAdapters.ProductsTableAdapter();
 			this.btnAdd = new System.Windows.Forms.Button();
 			this.btnEdit = new System.Windows.Forms.Button();
 			this.btnDelete = new System.Windows.Forms.Button();
@@ -104,6 +104,7 @@
 			// 
 			// btnAdd
 			// 
+			this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnAdd.Location = new System.Drawing.Point(693, 13);
 			this.btnAdd.Name = "btnAdd";
 			this.btnAdd.Size = new System.Drawing.Size(149, 46);
@@ -114,6 +115,7 @@
 			// 
 			// btnEdit
 			// 
+			this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnEdit.Location = new System.Drawing.Point(693, 66);
 			this.btnEdit.Name = "btnEdit";
 			this.btnEdit.Size = new System.Drawing.Size(149, 49);
@@ -124,6 +126,7 @@
 			// 
 			// btnDelete
 			// 
+			this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnDelete.Location = new System.Drawing.Point(693, 122);
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.Size = new System.Drawing.Size(149, 48);
@@ -141,7 +144,7 @@
 			this.Controls.Add(this.btnEdit);
 			this.Controls.Add(this.btnAdd);
 			this.Controls.Add(this.dgvProducts);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.KeyPreview = true;
 			this.Name = "frmProducts";
 			this.Text = "Products";
 			this.Load += new System.EventHandler(this.frmProducts_Load);
@@ -160,7 +163,7 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn barcodeDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-		private StoreDataDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
+		private StoreDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
 		private System.Windows.Forms.Button btnAdd;
 		private System.Windows.Forms.Button btnEdit;
 		private System.Windows.Forms.Button btnDelete;

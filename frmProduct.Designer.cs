@@ -67,7 +67,7 @@ namespace LegacyApplication
 			this.txtDescription.Location = new System.Drawing.Point(105, 42);
 			this.txtDescription.Name = "txtDescription";
 			this.txtDescription.Size = new System.Drawing.Size(182, 22);
-			this.txtDescription.TabIndex = 2;
+			this.txtDescription.TabIndex = 3;
 			this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
 			// 
 			// label2
@@ -76,7 +76,7 @@ namespace LegacyApplication
 			this.label2.Location = new System.Drawing.Point(16, 45);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(83, 17);
-			this.label2.TabIndex = 3;
+			this.label2.TabIndex = 2;
 			this.label2.Text = "&Description:";
 			// 
 			// mtbPrice
@@ -85,7 +85,7 @@ namespace LegacyApplication
 			this.mtbPrice.Mask = "000.00";
 			this.mtbPrice.Name = "mtbPrice";
 			this.mtbPrice.Size = new System.Drawing.Size(100, 22);
-			this.mtbPrice.TabIndex = 4;
+			this.mtbPrice.TabIndex = 5;
 			this.mtbPrice.TextChanged += new System.EventHandler(this.mtbPrice_TextChanged);
 			// 
 			// label3
@@ -94,7 +94,7 @@ namespace LegacyApplication
 			this.label3.Location = new System.Drawing.Point(16, 74);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(44, 17);
-			this.label3.TabIndex = 5;
+			this.label3.TabIndex = 4;
 			this.label3.Text = "&Price:";
 			// 
 			// btnCancel
@@ -103,7 +103,7 @@ namespace LegacyApplication
 			this.btnCancel.Location = new System.Drawing.Point(302, 141);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(119, 33);
-			this.btnCancel.TabIndex = 6;
+			this.btnCancel.TabIndex = 7;
 			this.btnCancel.Text = "&Cancel";
 			this.btnCancel.UseVisualStyleBackColor = true;
 			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -114,7 +114,7 @@ namespace LegacyApplication
 			this.btnOK.Location = new System.Drawing.Point(170, 141);
 			this.btnOK.Name = "btnOK";
 			this.btnOK.Size = new System.Drawing.Size(126, 33);
-			this.btnOK.TabIndex = 7;
+			this.btnOK.TabIndex = 6;
 			this.btnOK.Text = "&OK";
 			this.btnOK.UseVisualStyleBackColor = true;
 			this.btnOK.Click += new System.EventHandler(this.btnOK_Click);

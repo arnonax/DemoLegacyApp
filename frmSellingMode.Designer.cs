@@ -33,13 +33,13 @@
 			this.txtBarcode = new System.Windows.Forms.TextBox();
 			this.btnAdd = new System.Windows.Forms.Button();
 			this.dgvInvoice = new System.Windows.Forms.DataGridView();
-			this.label2 = new System.Windows.Forms.Label();
-			this.txtTotal = new System.Windows.Forms.TextBox();
-			this.btnClearAll = new System.Windows.Forms.Button();
-			this.productsTableAdapter = new LegacyApplication.StoreDataDataSetTableAdapters.ProductsTableAdapter();
 			this.colBarcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.label2 = new System.Windows.Forms.Label();
+			this.txtTotal = new System.Windows.Forms.TextBox();
+			this.btnClearAll = new System.Windows.Forms.Button();
+			this.productsTableAdapter = new LegacyApplication.StoreDataSetTableAdapters.ProductsTableAdapter();
 			((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -93,41 +93,6 @@
 			this.dgvInvoice.Size = new System.Drawing.Size(638, 341);
 			this.dgvInvoice.TabIndex = 3;
 			// 
-			// label2
-			// 
-			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(439, 422);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(44, 17);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Total:";
-			// 
-			// txtTotal
-			// 
-			this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTotal.Location = new System.Drawing.Point(489, 416);
-			this.txtTotal.Name = "txtTotal";
-			this.txtTotal.ReadOnly = true;
-			this.txtTotal.Size = new System.Drawing.Size(161, 26);
-			this.txtTotal.TabIndex = 5;
-			// 
-			// btnClearAll
-			// 
-			this.btnClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnClearAll.Location = new System.Drawing.Point(12, 405);
-			this.btnClearAll.Name = "btnClearAll";
-			this.btnClearAll.Size = new System.Drawing.Size(122, 36);
-			this.btnClearAll.TabIndex = 6;
-			this.btnClearAll.Text = "Clear all";
-			this.btnClearAll.UseVisualStyleBackColor = true;
-			this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
-			// 
-			// productsTableAdapter
-			// 
-			this.productsTableAdapter.ClearBeforeFill = true;
-			// 
 			// colBarcode
 			// 
 			this.colBarcode.HeaderText = "Barcode";
@@ -149,6 +114,41 @@
 			this.colPrice.HeaderText = "Price";
 			this.colPrice.Name = "colPrice";
 			this.colPrice.ReadOnly = true;
+			// 
+			// label2
+			// 
+			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(439, 422);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(44, 17);
+			this.label2.TabIndex = 5;
+			this.label2.Text = "Total:";
+			// 
+			// txtTotal
+			// 
+			this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtTotal.Location = new System.Drawing.Point(489, 416);
+			this.txtTotal.Name = "txtTotal";
+			this.txtTotal.ReadOnly = true;
+			this.txtTotal.Size = new System.Drawing.Size(161, 26);
+			this.txtTotal.TabIndex = 6;
+			// 
+			// btnClearAll
+			// 
+			this.btnClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnClearAll.Location = new System.Drawing.Point(12, 405);
+			this.btnClearAll.Name = "btnClearAll";
+			this.btnClearAll.Size = new System.Drawing.Size(122, 36);
+			this.btnClearAll.TabIndex = 4;
+			this.btnClearAll.Text = "Clear all";
+			this.btnClearAll.UseVisualStyleBackColor = true;
+			this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+			// 
+			// productsTableAdapter
+			// 
+			this.productsTableAdapter.ClearBeforeFill = true;
 			// 
 			// frmSellingMode
 			// 
@@ -181,7 +181,7 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txtTotal;
 		private System.Windows.Forms.Button btnClearAll;
-		private StoreDataDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
+		private StoreDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
 		private System.Windows.Forms.DataGridViewTextBoxColumn colBarcode;
 		private System.Windows.Forms.DataGridViewTextBoxColumn colDescription;
 		private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
