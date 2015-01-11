@@ -160,6 +160,8 @@
 			// 
 			this.dgvPromotions.AllowUserToAddRows = false;
 			this.dgvPromotions.AllowUserToDeleteRows = false;
+			this.dgvPromotions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.dgvPromotions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvPromotions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colPromotionDescription,
@@ -185,6 +187,7 @@
 			// 
 			// label3
 			// 
+			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.label3.AutoSize = true;
 			this.label3.Location = new System.Drawing.Point(12, 282);
 			this.label3.Name = "label3";
