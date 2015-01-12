@@ -94,7 +94,7 @@ SetOKEnabled:
 		{
 			txtBarcode.Text = productsRow.Barcode;
 			txtDescription.Text = productsRow.Description;
-			mtbPrice.Text = productsRow.Price.ToString();
+			mtbPrice.Text = productsRow.Price.ToString(mtbPrice.Mask);
 			return ShowDialog();
 		}
 	}
