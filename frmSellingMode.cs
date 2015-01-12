@@ -40,9 +40,9 @@ namespace LegacyApplication
 			txtTotal.Text = total.ToString("C");
 		}
 
-		private decimal CalculateDiscounts()
+		private int CalculateDiscounts()
 		{
-			var totalDisount = 0m;
+			var totalDisount = 0;
 			dgvPromotions.Rows.Clear();
 			foreach (var promotion in _dataset.Promotions)
 			{
@@ -50,7 +50,7 @@ namespace LegacyApplication
 				if (actualQuantity >= promotion.Quantity)
 				{
 					dgvPromotions.Rows.Add(promotion.Description, promotion.Discount);
-					totalDisount += promotion.Discount;
+					totalDisount += (int)promotion.Discount;
 				}
 			}
 			return totalDisount;
