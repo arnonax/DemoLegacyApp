@@ -4,9 +4,12 @@ namespace LegacyApplication
 {
 	public partial class frmMainMenu : Form
 	{
+		private readonly frmSellingMode _frmSellingMode;
+
 		public frmMainMenu()
 		{
 			InitializeComponent();
+			_frmSellingMode = new frmSellingMode();
 		}
 
 		private void btnProducts_Click(object sender, System.EventArgs e)
@@ -21,7 +24,7 @@ namespace LegacyApplication
 
 		private void btnSellingMode_Click(object sender, System.EventArgs e)
 		{
-			new frmSellingMode().ShowDialog();
+			_frmSellingMode.ShowDialog();
 		}
 
 		private void btnPromotions_Click(object sender, System.EventArgs e)

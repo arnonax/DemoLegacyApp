@@ -13,6 +13,8 @@ namespace LegacyApplication
 		public frmSellingMode()
 		{
 			InitializeComponent();
+			productsTableAdapter.Fill(_dataset.Products);
+			promotionsTableAdapter.Fill(_dataset.Promotions);
 		}
 
 		private void txtBarcode_TextChanged(object sender, EventArgs e)
@@ -58,17 +60,22 @@ namespace LegacyApplication
 
 		private void frmSellingMode_Load(object sender, EventArgs e)
 		{
-			productsTableAdapter.Fill(_dataset.Products);
-			promotionsTableAdapter.Fill(_dataset.Promotions);
-			txtTotal.Text = 0m.ToString("C");
+			Reset();
 		}
 
 		private void btnClearAll_Click(object sender, EventArgs e)
 		{
+			Reset();
+		}
+
+		private void Reset()
+		{
+			txtBarcode.Text = null;
 			dgvInvoice.Rows.Clear();
 			dgvPromotions.Rows.Clear();
 			_productsInInvoice.Clear();
 			txtTotal.Text = 0m.ToString("C");
+			txtBarcode.Focus();
 		}
 	}
 }
